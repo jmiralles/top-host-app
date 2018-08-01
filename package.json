@@ -1,0 +1,16 @@
+{
+  "name": "top-apps",
+  "version": "1.0.0",
+  "description": "showing top apps",
+  "main": "index.html",
+  "scripts": {
+    "webpack": "webpack",
+    "start:dev": "webpack-dev-server"
+  },
+  "dependencies": {
+    "babel-polyfill": "6.26.0"
+  },
+  "devDependencies": {
+    "webpack-dev-server": "^3.1.5"
+  }
+}
