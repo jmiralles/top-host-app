@@ -1,19 +1,26 @@
-fetch("/data/host-app-data.json", {
-  headers: {
-    "content-type": "application/json"
-  }
-})
-  .then(response => {
-    parseJson(response.json());
-  })
-  .catch(error => {
-    console.log("error");
-    console.log(error);
-  });
+const {a} = {a: 23}
 
-function parseJson(json) {
-  console.log(JSON.stringify(json));
+import SortObjectsInArray from './helpers.js';
+
+function init() {
+  return fetch("../data/host-app-data.json")
+  .then((response) => {
+    return response.json();
+  })
+  .then((data) => onData(data))
+  .catch(error => {
+    console.log("error retrieving data");
+    console.log(error);
+})};
+
+function onData(data) {
+  const sortedData = SortObjectsInArray(data);
+  console.log(sortedData)
 }
+
+init();
+
+
 class AppsStore {
   constructor(apps) {
     this.apps = apps;
