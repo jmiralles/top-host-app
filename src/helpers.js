@@ -1,9 +1,28 @@
 /*
   This is quicksort. Big-O is (n log(n)) for time and space complexity
+  we can avoid doing the sort every time we update the list
+  and achieveing Big-O (n) for insertion and removing:
+
+  for example, changing addAppToHosts in the model for Big-O (n):
+  addAppToHosts(newApp) {
+    for (let i = 0; i < this.apps.length; i++) {
+        if (i === this.apps.length -,1) {
+          // is the last postion
+          this.apps.push(newApp)
+          break;
+        }
+
+      if (this.apps.apdex < newApp.apdex) {
+        this.apps.splice(i, 0, newApp);
+        break;
+      }
+    }
+  }
+
 */
 
 export default class SortObjectsInArray {
-  constructor(arr, key = 'apdex') {
+  constructor(arr, key = "apdex") {
     this.arr = arr;
     this.key = key;
   }
@@ -41,3 +60,14 @@ export default class SortObjectsInArray {
     return partitionIndex;
   }
 }
+
+export function $on(target, type, callback, capture) {
+  target.addEventListener(type, callback, !!capture);
+}
+
+export function qs(selector, scope) {
+  return (scope || document).querySelector(selector);
+}
+
+export const escapeForHTML = s =>
+  s.replace(/[&<]/g, c => (c === "&" ? "&amp;" : "&lt;"));

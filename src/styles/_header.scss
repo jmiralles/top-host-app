@@ -1,0 +1,33 @@
+
+.header {
+    padding: $m-size;
+}
+
+.header__title {
+    font-family: 'HelveticaNeue-Bold', 'Courier New', Courier, monospace;
+    font-size: 3.5rem;
+    float: left;
+    margin: 0;
+    line-height: 43px;
+    width: 230px;
+}
+
+.header__user {
+    font-size: 1.8rem;
+    line-height: 55px;
+    margin-left: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 400px;
+    display: inline-block;
+}
+
+.header__checkbox {
+    font-size: 1rem;
+    line-height: 22px;
+    margin-left: 30px;
+    line-height: 55px;
+    display: block;
+    float: right;
+}
