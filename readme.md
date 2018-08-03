@@ -7,8 +7,9 @@ This app shows a list of apps ordered by apdex.
 npm install
 ```
 ```
-npm run dev
+npm run start
 ```
+Project is running at http://localhost:8080/
 
 ## Run tests
 
