@@ -2,7 +2,7 @@
 
 This app shows a list of apps ordered by apdex.
 
-## Instructions
+## To run on local
 ```
 npm install
 ```
@@ -10,7 +10,7 @@ npm install
 npm run dev
 ```
 
-## test
+## Run tests
 
 ```
 npm run test
